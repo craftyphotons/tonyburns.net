@@ -28,7 +28,7 @@ title = "Tony Burns"
   description = "Landing Page"
   bio = "Software Engineer • Photographer • Filmmaker"
   avatar = "img/avatar.jpg"
-  favicon = "img/favicon.ico"
+  favicon = "img/favicon.png"
   error404 = "There is no such page."
 
   [params.contact]
