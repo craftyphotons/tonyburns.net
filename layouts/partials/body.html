@@ -2,13 +2,13 @@
   <div class="h-card grid-container fivetoseven" role="main">
     <div class="item" aria-label="Avatar">
       <section id="avatar">
-        <img class="avatar" src="{{ .Site.Params.avatar }}" alt="{{ path.Base .Site.Params.avatar }}">
+        <img class="u-photo avatar" src="{{ .Site.Params.avatar }}" alt="{{ path.Base .Site.Params.avatar }}">
       </section>
     </div>
     <div class="grid-container full autocenter">
       <section id="bio" aria-label="Biography">
         <h1 class="p-name h3-like" aria-level="1" aria-label="Name">{{ .Site.Params.author }}</h1>
-        <p class="reset-margin" title="About" aria-label="About">{{ .Site.Params.bio | markdownify }}</p>
+        <p class="p-note reset-margin" title="About" aria-label="About">{{ .Site.Params.bio | markdownify }}</p>
       </section>
       <section id="contact" aria-label="Contact">
         <div class="icons" aria-label="Links">
