@@ -1,0 +1,8 @@
+{
+  "name": "tonyburns.net",
+  "version": "0.1.0",
+  "repository": "https://github.com/craftyphotons/tonyburns.net.git",
+  "author": "Tony Burns <tony@tonyburns.net>",
+  "license": "All Rights Reserved",
+  "private": true
+}
