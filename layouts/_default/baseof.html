@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ .Site.Title }}</title>
+  <meta name="description" content="">
+
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+  <link rel="microsub" href="https://aperture.p3k.io/microsub/544">
+  <link rel="webmention" href="https://webmention.io/tonyburns.net/webmention" />
+
+  {{ with .Site.Params.favicon }}
+  <link rel="shortcut icon" href="/{{.}}">{{ end }}
+
+  {{ $style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body>
+  <main id="main" aria-role="main">
+    {{- block "main" . }}{{- end }}
+  </main>
+</body>
+
+</html>
