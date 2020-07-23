@@ -1,40 +1,11 @@
-baseURL = "https://example.com/"
-# include content marked as draft
-buildDrafts = false
-# include content with publishdate in the future
-buildFuture = false
-# include content already expired
-buildExpired = false
-# enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.
-relativeURLs = true
-disableRSS = true
+enableGitInfo = true
 enableRobotsTXT = true
 editor = "code"
 languageCode = "en"
 language = "en"
-theme = "vncnt-hugo"
 title = "Tony Burns"
 
-[blackfriday]
-  extensions = ["hardLineBreak"]
-
 [permalinks]
-  fixed = ":title/"
-  posts = "posts/:slug/"
-
-[params]
-  author = "Tony Burns"
-  email = "tony@tonyburns.net"
-  description = "Landing Page"
-  bio = "Husband • Cloud Architect at Capital One • Author • Photographer • Filmmaker | He/Him | #BlackLivesMatter"
-  avatar = "img/avatar.jpg"
-  favicon = "img/favicon.png"
-  error404 = "There is no such page."
-
-  [params.contact]
-    linkedin = "https://www.linkedin.com/in/tonyhburns/"
-    github = "https://github.com/craftyphotons" 
-    instagram = "https://instagram.com/craftyphotons"
-    soundcloud = "https://soundcloud.com/craftyphotons"
-    youtube = "https://www.youtube.com/channel/UC-d7J23G-EhFJPXR8UsqQKg"
-    twitter = "https://twitter.com/craftyphotons"
+  articles = "articles/:title/"
+  notes = "notes/:year/:month/:day/:title"
+  photos = "photos/:year/:month/:day/:title"
