@@ -1,6 +1,9 @@
 HUGO_CMD := "hugo"
 
-all: production
+all: clean production
+
+clean:
+	rm -rf public/ resources/
 
 preview:
 	$(HUGO_CMD)
