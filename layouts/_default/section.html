@@ -6,7 +6,19 @@
       <div class="column"></div>
 
       <div class="column is-half">
-        <div class="card">
+        {{ $pag := .Paginator 2 }}
+
+        {{ if eq 0 $pag.TotalNumberOfElements }}
+        <div class="hero">
+          <div class="hero-body">
+            <h1 class="subtitle has-text-centered">Nothing to see here yet!</h1>
+          </div>
+        </div>
+        {{ end }}
+
+        {{ if ne 0 $pag.TotalNumberOfElements }}
+        {{ range $pag.Pages }}
+        <div class="card mb-4">
           <div class="card-content">
             <article class="media h-entry">
               <figure class="media-left">
@@ -32,6 +44,9 @@
             </article>
           </div>
         </div>
+        {{ end }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
       </div>
 
       <div class="column"></div>

@@ -1,11 +1,12 @@
+baseurl = "/"
 enableGitInfo = true
 enableRobotsTXT = true
 editor = "code"
-languageCode = "en"
+languageCode = "en-US"
 language = "en"
 title = "Tony Burns"
 
 [permalinks]
   articles = "articles/:title/"
-  notes = "notes/:year/:month/:day/:title"
-  photos = "photos/:year/:month/:day/:title"
+  notes = "notes/:title/"
+  photos = "photos/:title/"

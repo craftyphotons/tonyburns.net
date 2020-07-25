@@ -2,31 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>{{ .Site.Title }}</title>
-  <meta name="description" content="">
+  <meta name="description" content="" />
 
-  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-  <link rel="microsub" href="https://aperture.p3k.io/microsub/544">
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+  <link rel="microsub" href="https://aperture.p3k.io/microsub/544" />
   <link rel="webmention" href="https://webmention.io/tonyburns.net/webmention" />
 
   {{ with .Site.Params.favicon }}
-  <link rel="shortcut icon" href="/{{.}}">{{ end }}
-
+  <link rel="shortcut icon" href="/{{.}}" />
+  {{ end }}
   {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/bulma" "node_modules/@fortawesome/fontawesome-free/scss")) }}
   {{ $style := resources.Get "css/main.scss" | toCSS $options | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
 </head>
 
 <body>
   {{ partial "site-header.html" . }}
-  <main id="main" aria-role="main">
-    {{- block "main" . }}{{- end }}
-  </main>
+  {{- block "main" . }}{{- end }}
   {{ partial "site-footer.html" . }}
 </body>
 
