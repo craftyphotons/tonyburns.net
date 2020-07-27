@@ -7,6 +7,6 @@ language = "en"
 title = "Tony Burns"
 
 [permalinks]
-  articles = "articles/:title/"
-  notes = "notes/:title/"
-  photos = "photos/:title/"
+  articles = "articles/:slug/"
+  notes = "notes/:slug/"
+  photos = "photos/:slug/"
