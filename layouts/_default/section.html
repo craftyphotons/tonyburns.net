@@ -6,7 +6,7 @@
       <div class="column"></div>
 
       <div class="column is-half">
-        {{ $pag := .Paginator 2 }}
+        {{ $pag := .Paginator 10 }}
 
         {{ if eq 0 $pag.TotalNumberOfElements }}
         <div class="hero">
@@ -18,9 +18,18 @@
 
         {{ if ne 0 $pag.TotalNumberOfElements }}
         {{ range $pag.Pages }}
-        <div class="card mb-4">
+        <article class="card mb-4 h-entry">
+          {{ if isset .Params "photos" }}
+          <div class="card-image">
+            {{ range first 1 (.Param "photos") }}
+            <figure class="image">
+              <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
+            </figure>
+            {{ end }}
+          </div>
+          {{ end }}
           <div class="card-content">
-            <article class="media h-entry">
+            <div class="media h-entry">
               <figure class="media-left">
                 <p class="image is-64x64 u-author h-card">
                   <img class="is-rounded u-photo p-name" src="/img/avatar-square.jpg" alt="Tony Burns" />
@@ -35,15 +44,15 @@
                   <small>
                     <a href="{{ .Permalink }}" class="has-text-dark u-url">
                       <time class="dt-published" datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Date.UTC }}">
-                        {{- dateFormat "15:04 MST • Jan 2, 2006" .Date -}}
+                        {{- dateFormat "15:04 MST • Jan 2, 2006" .Date.Local -}}
                       </time>
                     </a>
                   </small>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
-        </div>
+        </article>
         {{ end }}
         {{ end }}
         {{ partial "pagination.html" . }}
