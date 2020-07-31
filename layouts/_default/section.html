@@ -41,13 +41,29 @@
                 </div>
 
                 <div class="content">
-                  <small>
-                    <a href="{{ .Permalink }}" class="has-text-dark u-url">
-                      <time class="dt-published" datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Date.UTC }}">
-                        {{- dateFormat "15:04 MST • Jan 2, 2006" .Date.Local -}}
-                      </time>
-                    </a>
-                  </small>
+                  <div class="level">
+                    <div class="level-left">
+                      <div class="level-item">
+                        <small>
+                          <a href="{{ .Permalink }}" class="has-text-dark u-url">
+                            <time class="dt-published"
+                              datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Date.UTC }}">
+                              {{- dateFormat "15:04 MST • Jan 2, 2006" .Date -}}
+                            </time>
+                          </a>
+                        </small>
+                      </div>
+                    </div>
+                    <div class="level-right">
+                      {{ if isset .Params "categories" }}
+                      <div class="tags">
+                        {{ range (.Param "categories") }}
+                        <span class="tag">#<span class="p-category">{{ . }}</span></span>
+                        {{ end }}
+                      </div>
+                      {{ end }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
