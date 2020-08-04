@@ -1,0 +1,3 @@
+[submodule "themes/wilson"]
+	path = themes/wilson
+	url = https://github.com/craftyphotons/wilson

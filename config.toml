@@ -5,6 +5,7 @@ editor = "code"
 languageCode = "en-US"
 language = "en"
 title = "Tony Burns"
+theme = "wilson"
 
 [permalinks]
   articles = "articles/:slug/"
