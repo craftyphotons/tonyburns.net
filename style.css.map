@@ -3,8 +3,8 @@
 	"file": "style.css",
 	"sourceRoot": "/home/runner/work/tonyburns.net/tonyburns.net",
 	"sources": [
-		"assets/css/main.scss",
-		"assets/css/_variables.scss",
+		"themes/wilson/assets/css/main.scss",
+		"themes/wilson/assets/css/_variables.scss",
 		"node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
 		"node_modules/@fortawesome/fontawesome-free/scss/_variables.scss",
 		"node_modules/@fortawesome/fontawesome-free/scss/_mixins.scss",
