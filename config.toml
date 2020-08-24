@@ -11,10 +11,19 @@ disablePathToLower = true
 
 [permalinks]
   articles = "articles/:slug/"
+  audio = "audio/:slug/"
+  bookmarks = "bookmarks/:slug/"
   notes = "notes/:slug/"
   photos = "photos/:slug/"
+  replies = "replies/:slug/"
+  reposts = "reposts/:slug/"
+  rsvps = "rsvps/:slug/"
+  videos = "videos/:slug/"
 
 [params]
+  mainSections = ["articles", "notes", "photos", "videos", "audio", "bookmarks", "likes", "replies", "reposts"]
+  citationTypes = ["bookmarks", "likes", "replies", "reposts", "rsvps"]
+
   [[params.links]]
     rel = "authorization_endpoint"
     href = "https://tonyburns.io/indieauth/authorize"
