@@ -8,9 +8,9 @@ metadata:
     to Hugo!
   og_title: tonyburns.net
   og_url: https://tonyburns.net/notes/de6a9e
-  og_image: 
-  og_image_height: 
-  og_image_width: 
+  og_image: https://assets.tonyburns.net/photo/7c68a00bb17e13372c7476f064ab511d.jpeg
+  og_image_height: 630
+  og_image_width: 630
   og_type: article
   og_description: This is my first note created in Singulus and automatically published
     to Hugo!
@@ -23,10 +23,10 @@ metadata:
   twitter_title: tonyburns.net
   twitter_description: This is my first note created in Singulus and automatically
     published to Hugo!
-  twitter_image: 
+  twitter_image: https://assets.tonyburns.net/photo/95e1f1d2bd504177c28895d76d097e38.jpeg
   twitter_image_alt: Tony Burns
-  twitter_image_height: 
-  twitter_image_width: 
+  twitter_image_height: 400
+  twitter_image_width: 400
 
 ---
 
